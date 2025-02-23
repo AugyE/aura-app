@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Aura ✨</h1>
+        
+        <!-- Profile Section -->
+        <div class="profile-card">
+            <img id="profile-pic" src="https://via.placeholder.com/100" alt="Profile Picture">
+            <input type="file" id="pic-upload" accept="image/*" onchange="updateProfilePic()">
+            <input type="text" id="username" placeholder="Enter Username" onchange="saveProfile()">
+            <input type="email" id="email" placeholder="Enter Email" onchange="saveProfile()">
+        </div>
+
+        <!-- Dashboard -->
+        <div id="user-dashboard">
+            <h2>Your Aura Glow</h2>
+            <p><span class="highlight">HP:</span> <span id="hp">10000</span></p>
+            <p><span class="highlight">Crystals:</span> <span id="crystals">0</span></p>
+            <p><span class="highlight">Status:</span> <span id="status">New User</span></p>
+        </div>
+
+        <!-- Actions -->
+        <div class="actions">
+            <button onclick="dailyLogin()">Daily Login<br><small>+25 HP, +2 Crystals</small></button>
+            <button onclick="addFriend()">Add Friend<br><small>+100 HP, +5 Crystals</small></button>
+            <button onclick="makePost()">Make Post<br><small>+50 HP</small></button>
+            <button onclick="updateMood()">Set Mood<br><small>+20 HP</small></button>
+        </div>
+        <p id="message"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
